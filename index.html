@@ -1,315 +1,380 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FluxShare</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>FluxShare</title>
+    <meta name="description" content="FluxShare — transferência de arquivos P2P com fallback para QUIC e Cloudflare Tunnel. Rápido, privado e open source.">
 </head>
 <body>
-    <div class="tela1">
-        <header>
-            <div class="caixa-header">
-                <img alt="Logo" src="assets/logo.png"/>
-                <div class="linksHeader">
-                    <a href="#sobreNos">Sobre nós</a>
-                    <a href="#funcionalidades">Funcionalidades</a>
-                    <a href="#final-cta" id="botao-baixar">Baixar FluxShare</a>
-                </div>
-                <div class="header-right">
-                    <p>PT-BR</p>
-                    <button id="theme-toggle" class="theme-btn">🌙</button>
-                </div>
-            </div>
-        </header>
-        <section id="section1">
-            <a class="linkDocumentacao" href="">FluxShare 1.0 recém lançado</a>
-            <h1>A melhor forma de transferência de arquivos P2P com fallback automático para QUIC e Cloudflare Tunnel.</h1>
-            <p style="color: var(--border-dark);;">Uma forma de transferir seus arquivos mais rápido e fácil do que o convencional. Transfira arquivos P2P Ultra Rápido poupando uma boa parte de seu tempo.</p>
-            <a href="#" class="linkBaixar">Download para Windows</a>
-        </section>
-    </div>
-    <div class="tela2">
-        <img src="./assets/page.png" alt="imagemDaPagina" id="imagemPagina">
-        <section id="sobreNos">
-            <h2>Sobre Nós</h2>
-            <p style="color: white;">Bem-vindo ao FluxShare! Somos Jeferson, Luiz, Matheus e Oseias, um time de estudantes de Tecnologia em Análise e Desenvolvimento de Sistemas (TADS) apaixonados por inovação. Com muita dedicação e trabalho colaborativo, desenvolvemos o FluxShare com o objetivo de otimizar a colaboração e o compartilhamento de recursos de forma eficiente e intuitiva.
-            <br><br>
-            Nossa jornada é movida pela paixão em criar soluções tecnológicas que conectam pessoas e facilitam o dia a dia. Cada detalhe do FluxShare reflete nosso compromisso com a excelência, o aprendizado contínuo e a crença inabalável no poder da colaboração. Agradecemos por utilizar o FluxShare e por nos acompanhar nesta empolgante jornada tecnológica!</p>
-        </section>
+    <header class="site-header" role="banner">
+        <div class="caixa-header">
+            <a class="brand" href="#top" aria-label="FluxShare">
+                <img alt="Logo FluxShare" src="assets/logo.png" class="logo">
+                <span class="brand-name">FluxShare</span>
+            </a>
 
-        <!-- HERO SECTION -->
-        <section class="hero" id="funcionalidades">
-            <h1>Transfira Arquivos Sem Limites. Direto. Privado. Instantâneo.</h1>
-            <p>Conexão P2P verdadeira com fallback inteligente. Seus arquivos nunca passam por servidores de terceiros.</p>
-            <div class="cta-buttons">
-                <button class="primary">Baixar Grátis</button>
-                <button class="secondary">Ver Demo</button>
+            <nav class="linksHeader" role="navigation" aria-label="Navegação principal">
+                <a href="#sobreNos">Sobre nós</a>
+                <a href="#funcionalidades">Funcionalidades</a>
+                <a href="#final-cta" id="botao-baixar" class="pill-link">Baixar FluxShare</a>
+            </nav>
+
+            <div class="actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                    <span class="icon-dark" aria-hidden="true">🌙</span>
+                    <span class="icon-light" aria-hidden="true">☀</span>
+                </button>
+                <button class="locale" aria-label="Idioma atual">PT-BR</button>
             </div>
-            <div class="platforms">
+        </div>
+    </header>
+
+    <main id="top">
+        <section id="section1" class="hero">
+            <a class="linkDocumentacao" href="#" aria-label="Ver notas de lançamento do FluxShare 1.0">
+                FluxShare 1.0 recém lançado
+            </a>
+            <h1>A melhor forma de transferência de arquivos P2P com fallback automático para QUIC e Cloudflare Tunnel.</h1>
+            <p>Transfira seus arquivos de forma mais rápida e simples. P2P de alta performance, sem intermediários e com privacidade de ponta.</p>
+            <div class="cta-buttons">
+                <a href="#final-cta" class="primary">Baixar Grátis</a>
+                <a href="#demo" class="secondary">Ver Demo</a>
+            </div>
+            <div class="platforms" aria-label="Plataformas suportadas">
                 <span>Windows</span>
                 <span>macOS</span>
                 <span>Linux</span>
             </div>
         </section>
 
-        <!-- FUNCIONALIDADES CORE -->
-        <section class="features-core">
-            <h2>Transferência de Arquivos Reimaginada</h2>
-            <div class="feature">
-                <div class="icon">🔗</div>
-                <h3>Sem Intermediários</h3>
-                <p>Conexão direta entre dispositivos. Velocidade máxima da sua rede, sem throttling.</p>
-                <span class="metric">Até 10x mais rápido que serviços em nuvem</span>
-            </div>
-            <div class="feature">
-                <div class="icon">♾</div>
-                <h3>Arquivos Ilimitados</h3>
-                <p>Transfira 1GB ou 1TB. Sem restrições, sem planos premium.</p>
-                <span class="metric">Testado com arquivos de até 500GB</span>
-            </div>
-            <div class="feature">
-                <div class="icon">🔒</div>
-                <h3>Zero Knowledge</h3>
-                <p>Criptografia AES-256 antes de sair do seu dispositivo. Nem nós podemos ver seus arquivos.</p>
-                <span class="badge">Open Source - Auditável</span>
-            </div>
-            <div class="feature">
-                <div class="icon">🌐</div>
-                <h3>Conexão Garantida</h3>
-                <p>Fallback automático: WebRTC → QUIC → Cloudflare Tunnel. Funciona mesmo em redes corporativas restritivas.</p>
-                <span class="metric">99.9% de taxa de sucesso de conexão</span>
-            </div>
-        </section>
+        <section class="tela2">
+            <img src="./assets/page.png" alt="Prévia da interface do FluxShare" id="imagemPagina">
+            
+            <section id="sobreNos" class="container narrow fade-in">
+                <h2>Sobre Nós</h2>
+                <p>Bem-vindo ao FluxShare! Somos Jeferson, Luiz, Matheus e Oseias, um time de estudantes de Tecnologia em Análise e Desenvolvimento de Sistemas (TADS) apaixonados por inovação. Construímos o FluxShare para tornar o compartilhamento P2P mais eficiente, seguro e simples.</p>
+            </section>
 
-        <!-- DIFERENCIAIS TÉCNICOS -->
-        <section class="differentials">
-            <h2 id="tecnologiaQueFunciona">Tecnologia que Funciona</h2>
-            <div class="differential">
-                <h3>Multiplataforma Nativo</h3>
-                <p>Windows 10/11, macOS 11+, Linux (AppImage universal)</p>
-                <span>Um único app, todas as plataformas. Sem navegador necessário.</span>
-            </div>
-            <div class="differential">
-                <h3>Retomada Automática</h3>
-                <p>Conexão caiu? Retomamos de onde parou. Zero perda de progresso.</p>
-            </div>
-            <div class="differential">
-                <h3>Transferências Paralelas</h3>
-                <p>Envie para múltiplos destinatários simultaneamente. Cada conexão na velocidade máxima.</p>
-            </div>
-            <div class="differential">
-                <h3>Sem Cadastro</h3>
-                <p>Instale e use. Sem email, sem senha, sem fricção.</p>
-            </div>
-        </section>
-
-        <!-- COMPARAÇÃO DE SEGURANÇA -->
-        <section class="security-comparison">
-            <h2>Segurança Sem Compromissos</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Recurso</th>
-                        <th>FluxShare</th>
-                        <th>Serviços em Nuvem</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Criptografia E2E</td>
-                        <td>✅ Sempre ativa</td>
-                        <td>⚠ Opcional/Premium</td>
-                    </tr>
-                    <tr>
-                        <td>Armazenamento</td>
-                        <td>❌ Zero (P2P direto)</td>
-                        <td>⚠ Servidores terceiros</td>
-                    </tr>
-                    <tr>
-                        <td>Logs de acesso</td>
-                        <td>❌ Não rastreamos</td>
-                        <td>⚠ Metadados coletados</td>
-                    </tr>
-                    <tr>
-                        <td>Código aberto</td>
-                        <td>✅ MIT License</td>
-                        <td>❌ Proprietário</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="trust-badges">
-                <span>Auditado pela comunidade</span>
-                <span>Sem telemetria ou analytics</span>
-                <span>Conforme LGPD/GDPR</span>
-            </div>
-        </section>
-
-        <!-- CASOS DE USO -->
-        <section class="use-cases">
-            <h2 id="feitoParaVoce">Feito Para Você</h2>
-            <div class="use-case">
-                <div class="icon">🎬</div>
-                <h3>Para Profissionais Criativos</h3>
-                <p>Envie projetos de vídeo 4K para clientes sem compressão ou upload lento.</p>
-            </div>
-            <div class="use-case">
-                <div class="icon">💻</div>
-                <h3>Para Desenvolvedores</h3>
-                <p>Compartilhe builds e datasets grandes entre equipes sem depender de infraestrutura.</p>
-            </div>
-            <div class="use-case">
-                <div class="icon">🏢</div>
-                <h3>Para Empresas</h3>
-                <p>Transfira backups e arquivos sensíveis sem expor dados a serviços externos.</p>
-            </div>
-            <div class="use-case">
-                <div class="icon">📸</div>
-                <h3>Para Uso Pessoal</h3>
-                <p>Envie álbuns de fotos e vídeos de família sem perder qualidade ou pagar assinaturas.</p>
-            </div>
-        </section>
-
-        <!-- PERFORMANCE -->
-        <section class="performance">
-            <h2>Performance Real</h2>
-            <div class="stats">
-                <div class="stat">
-                    <span class="number">10x</span>
-                    <span class="label">Mais rápido que nuvem</span>
+            <!-- HERO DE PRODUTO -->
+            <section id="funcionalidades" class="features-core container fade-in">
+                <h2>Transferência de Arquivos Reimaginada</h2>
+                
+                <div class="feature">
+                    <div class="icon" aria-hidden="true">🔗</div>
+                    <h3>Sem Intermediários</h3>
+                    <p>Conexão direta entre dispositivos. Velocidade máxima, sem throttling.</p>
+                    <span class="metric">Até 10x mais rápido que serviços em nuvem</span>
                 </div>
-                <div class="stat">
-                    <span class="number">500GB</span>
-                    <span class="label">Maior arquivo testado</span>
+
+                <div class="feature">
+                    <div class="icon" aria-hidden="true">♾</div>
+                    <h3>Arquivos Ilimitados</h3>
+                    <p>De 1GB a 1TB+. Sem restrições, sem planos premium.</p>
+                    <span class="metric">Testado com arquivos de até 500GB</span>
                 </div>
-                <div class="stat">
-                    <span class="number">99.9%</span>
-                    <span class="label">Taxa de sucesso</span>
+
+                <div class="feature">
+                    <div class="icon" aria-hidden="true">🔒</div>
+                    <h3>Zero Knowledge</h3>
+                    <p>Criptografia AES-256 no dispositivo. Sem coleta ou leitura de dados.</p>
+                    <span class="badge">Open Source - Auditável</span>
                 </div>
-                <div class="stat">
-                    <span class="number">0</span>
-                    <span class="label">Dados coletados</span>
+
+                <div class="feature">
+                    <div class="icon" aria-hidden="true">🌐</div>
+                    <h3>Conexão Garantida</h3>
+                    <p>Fallback: WebRTC → QUIC → Cloudflare Tunnel. Funciona até em redes restritivas.</p>
+                    <span class="metric">99.9% de taxa de sucesso</span>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- INTERFACE -->
-        <section class="interface">
-            <h2>Interface Intuitiva</h2>
-            <div class="screenshot">
-                <h3>Enviar</h3>
-                <p>Arraste arquivos ou pastas. Gere link de compartilhamento instantâneo.</p>
-            </div>
-            <div class="screenshot">
-                <h3>Receber</h3>
-                <p>Cole o código de 6 dígitos. Download inicia automaticamente.</p>
-            </div>
-            <div class="screenshot">
-                <h3>Peers Ativos</h3>
-                <p>Veja todas as transferências em tempo real. Pause/retome a qualquer momento.</p>
-            </div>
-            <div class="screenshot">
-                <h3>Configurações</h3>
-                <p>Controle total: limite de banda, porta customizada, modo escuro.</p>
-            </div>
-        </section>
+            <!-- DIFERENCIAIS -->
+            <section class="differentials container fade-in">
+                <h2 id="tecnologiaQueFunciona">Tecnologia que Funciona</h2>
+                <div class="differential">
+                    <h3>Multiplataforma Nativo</h3>
+                    <p>Windows 10/11, macOS 11+, Linux (AppImage universal)</p>
+                    <span>Um único app, todas as plataformas. Sem navegador.</span>
+                </div>
+                <div class="differential">
+                    <h3>Retomada Automática</h3>
+                    <p>Queda de conexão? Retomada do ponto exato. Zero perda.</p>
+                </div>
+                <div class="differential">
+                    <h3>Transferências Paralelas</h3>
+                    <p>Múltiplos destinatários simultâneos na velocidade máxima.</p>
+                </div>
+                <div class="differential">
+                    <h3>Sem Cadastro</h3>
+                    <p>Instale e use. Sem e-mail, sem senha, sem fricção.</p>
+                </div>
+            </section>
 
-        <!-- DEPOIMENTOS -->
-        <section class="testimonials">
-            <h2 style="color: black;">O Que Dizem os Usuários</h2>
-            <div class="testimonial">
-                <p>"Transferi 200GB de footage em 15 minutos. Impossível com WeTransfer."</p>
-                <span>— João Silva, Editor de Vídeo</span>
-            </div>
-            <div class="testimonial">
-                <p>"Finalmente uma solução P2P que funciona em rede corporativa."</p>
-                <span>— Maria Santos, DevOps Engineer</span>
-            </div>
-            <div class="testimonial">
-                <p>"Open source + privacidade real. Exatamente o que eu procurava."</p>
-                <span>— Carlos Mendes, Security Researcher</span>
-            </div>
-        </section>
+            <!-- COMPARAÇÃO DE SEGURANÇA -->
+            <section class="security-comparison fade-in" aria-labelledby="segurancaTitle">
+                <h2 id="segurancaTitle">Segurança Sem Compromissos</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Recurso</th>
+                                <th>FluxShare</th>
+                                <th>Serviços em Nuvem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Criptografia E2E</td>
+                                <td>✅ Sempre ativa</td>
+                                <td>⚠ Opcional/Premium</td>
+                            </tr>
+                            <tr>
+                                <td>Armazenamento</td>
+                                <td>❌ Zero (P2P direto)</td>
+                                <td>⚠ Servidores terceiros</td>
+                            </tr>
+                            <tr>
+                                <td>Logs de acesso</td>
+                                <td>❌ Não rastreamos</td>
+                                <td>⚠ Metadados coletados</td>
+                            </tr>
+                            <tr>
+                                <td>Código aberto</td>
+                                <td>✅ MIT License</td>
+                                <td>❌ Proprietário</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="trust-badges">
+                    <span>Auditado pela comunidade</span>
+                    <span>Sem telemetria</span>
+                    <span>Conforme LGPD/GDPR</span>
+                </div>
+            </section>
 
-        <!-- FAQ -->
-        <section class="faq">
-            <h2 style="color: black;">Perguntas Frequentes</h2>
-            <div class="faq-item">
-                <h3>Preciso abrir portas no roteador?</h3>
-                <p>Não. O fallback automático garante conexão mesmo em NAT restritivo.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Funciona offline?</h3>
-                <p>Sim, na mesma rede local (LAN). Ideal para transferências em escritórios.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Os arquivos ficam armazenados em algum lugar?</h3>
-                <p>Nunca. Transferência direta peer-to-peer. Zero armazenamento intermediário.</p>
-            </div>
-            <div class="faq-item">
-                <h3>É realmente grátis?</h3>
-                <p>Sim. MIT License, sem ads, sem freemium. Código aberto para sempre.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Como vocês se sustentam?</h3>
-                <p>Projeto open source mantido pela comunidade. Doações opcionais via GitHub Sponsors.</p>
-            </div>
-        </section>
+            <!-- CASOS DE USO -->
+            <section class="use-cases container fade-in">
+                <h2 id="feitoParaVoce">Feito Para Você</h2>
+                <div class="use-case">
+                    <div class="icon" aria-hidden="true">🎬</div>
+                    <h3>Para Profissionais Criativos</h3>
+                    <p>Envie projetos 4K sem compressão ou espera de upload.</p>
+                </div>
+                <div class="use-case">
+                    <div class="icon" aria-hidden="true">💻</div>
+                    <h3>Para Desenvolvedores</h3>
+                    <p>Compartilhe builds e datasets grandes sem infra extra.</p>
+                </div>
+                <div class="use-case">
+                    <div class="icon" aria-hidden="true">🏢</div>
+                    <h3>Para Empresas</h3>
+                    <p>Backups e dados sensíveis sem expor a terceiros.</p>
+                </div>
+                <div class="use-case">
+                    <div class="icon" aria-hidden="true">📸</div>
+                    <h3>Para Uso Pessoal</h3>
+                    <p>Álbuns e vídeos sem perda de qualidade ou assinaturas.</p>
+                </div>
+            </section>
 
-        <!-- CTA FINAL -->
-        <section id="final-cta" class="final-cta">
-            <h2>Pronto para Transferir Sem Limites?</h2>
-            <div class="download-buttons">
-                <button class="download-btn">
-                    <span class="os">Windows</span>
-                    <span class="arch">x64 | ARM64</span>
-                </button>
-                <button class="download-btn">
-                    <span class="os">macOS</span>
-                    <span class="arch">Intel | Apple Silicon</span>
-                </button>
-                <button class="download-btn">
-                    <span class="os">Linux</span>
-                </button>
-            </div>
-            <div class="secondary-links">
-                <a href="#">📖 Documentação</a>
-                <a href="#">💬 Discord Community</a>
-                <a href="#">🐛 Reportar Bug</a>
-                <a href="#">⭐ GitHub</a>
-            </div>
-        </section>
+            <!-- PERFORMANCE -->
+            <section class="performance fade-in">
+                <h2>Performance Real</h2>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="number">10x</span>
+                        <span class="label">Mais rápido que nuvem</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">500GB</span>
+                        <span class="label">Maior arquivo testado</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">99.9%</span>
+                        <span class="label">Taxa de sucesso</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">0</span>
+                        <span class="label">Dados coletados</span>
+                    </div>
+                </div>
+            </section>
 
-        <!-- FOOTER -->
-        <footer>
-            <div class="tech-specs">
-                <h3>Especificações Técnicas</h3>
-                <ul>
-                    <li><strong>Protocolos:</strong> WebRTC, QUIC, Cloudflare Tunnel</li>
-                    <li><strong>Criptografia:</strong> AES-256-GCM</li>
-                    <li><strong>Checksum:</strong> BLAKE3</li>
-                    <li><strong>Licença:</strong> MIT</li>
-                    <li><strong>Stack:</strong> Rust + Tauri + React</li>
-                </ul>
-            </div>
-            <div class="trust-badges-footer">
-                <span>✅ Open Source Initiative</span>
-                <span>✅ No Telemetry</span>
-                <span>✅ LGPD Compliant</span>
-                <span>✅ Audited Code</span>
-            </div>
-            <div class="legal-links">
-                <a href="#">Política de Privacidade</a>
-                <a href="#">Termos de Uso</a>
-                <a href="#">Código de Conduta</a>
-            </div>
-            <p class="copyright">© 2025 FluxShare. Licenciado sob MIT License.</p>
-        </footer>
-    </div>
-    <script src="script.js"></script>
+            <!-- INTERFACE -->
+            <section class="interface container fade-in" id="demo">
+                <h2>Interface Intuitiva</h2>
+                <div class="screenshot">
+                    <h3>Enviar</h3>
+                    <p>Arraste arquivos ou pastas. Gere link de compartilhamento instantâneo.</p>
+                </div>
+                <div class="screenshot">
+                    <h3>Receber</h3>
+                    <p>Cole o código de 6 dígitos. Download inicia automaticamente.</p>
+                </div>
+                <div class="screenshot">
+                    <h3>Peers Ativos</h3>
+                    <p>Transparência total. Pause/retome a qualquer momento.</p>
+                </div>
+                <div class="screenshot">
+                    <h3>Configurações</h3>
+                    <p>Limite de banda, porta customizada, modo escuro.</p>
+                </div>
+            </section>
+
+            <!-- DEPOIMENTOS -->
+            <section class="testimonials container fade-in">
+                <h2>O Que Dizem os Usuários</h2>
+                <div class="testimonial">
+                    <p>"Transferi 200GB de footage em 15 minutos. Impossível com WeTransfer."</p>
+                    <span>— João Silva, Editor de Vídeo</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Finalmente uma solução P2P que funciona em rede corporativa."</p>
+                    <span>— Maria Santos, DevOps Engineer</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Open source + privacidade real. Exatamente o que eu procurava."</p>
+                    <span>— Carlos Mendes, Security Researcher</span>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="faq container fade-in">
+                <h2>Perguntas Frequentes</h2>
+                <div class="faq-item">
+                    <h3>Preciso abrir portas no roteador?</h3>
+                    <p>Não. O fallback automático garante conexão mesmo em NAT restritivo.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Funciona offline?</h3>
+                    <p>Sim, em LAN. Ideal para escritórios.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Os arquivos ficam armazenados em algum lugar?</h3>
+                    <p>Nunca. Transferência direta peer-to-peer.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>É realmente grátis?</h3>
+                    <p>Sim. MIT License, sem ads ou freemium. Open source.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Como vocês se sustentam?</h3>
+                    <p>Comunidade open source. Doações via GitHub Sponsors.</p>
+                </div>
+            </section>
+
+            <!-- CTA FINAL -->
+            <section id="final-cta" class="final-cta fade-in">
+                <h2>Pronto para Transferir Sem Limites?</h2>
+                <div class="download-buttons">
+                    <button class="download-btn" aria-label="Baixar para Windows">
+                        <span class="os">Windows</span>
+                        <span class="arch">x64 | ARM64</span>
+                    </button>
+                    <button class="download-btn" aria-label="Baixar para macOS">
+                        <span class="os">macOS</span>
+                        <span class="arch">Intel | Apple Silicon</span>
+                    </button>
+                    <button class="download-btn" aria-label="Baixar para Linux">
+                        <span class="os">Linux</span>
+                    </button>
+                </div>
+                <div class="secondary-links">
+                    <a href="#">Documentação</a>
+                    <a href="#">Discord Community</a>
+                    <a href="#">Reportar Bug</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="fade-in">
+        <div class="tech-specs">
+            <h3>Especificações Técnicas</h3>
+            <ul>
+                <li><strong>Protocolos:</strong> WebRTC, QUIC, Cloudflare Tunnel</li>
+                <li><strong>Criptografia:</strong> AES-256-GCM</li>
+                <li><strong>Checksum:</strong> BLAKE3</li>
+                <li><strong>Licença:</strong> MIT</li>
+                <li><strong>Stack:</strong> Rust + Tauri + React</li>
+            </ul>
+        </div>
+        <div class="trust-badges-footer">
+            <span>✅ Open Source Initiative</span>
+            <span>✅ No Telemetry</span>
+            <span>✅ LGPD Compliant</span>
+            <span>✅ Audited Code</span>
+        </div>
+        <div class="legal-links">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Código de Conduta</a>
+        </div>
+        <p class="copyright">© 2025 FluxShare. Licenciado sob MIT License.</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+    <script>
+        (function() {
+            const root = document.documentElement;
+            const toggle = document.getElementById('themeToggle');
+            const backToTop = document.getElementById('backToTop');
+
+            function applyTheme(t) {
+                root.setAttribute('data-theme', t);
+                try {
+                    localStorage.setItem('fluxshare-theme', t);
+                } catch (e) {}
+            }
+
+            function getPreferredTheme() {
+                try {
+                    const saved = localStorage.getItem('fluxshare-theme');
+                    if (saved) return saved;
+                } catch (e) {}
+                return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            }
+
+            applyTheme(getPreferredTheme());
+
+            toggle.addEventListener('click', function() {
+                const current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                applyTheme(current);
+            });
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 600) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Fade-in on scroll
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll('.fade-in').forEach(function(el) {
+                observer.observe(el);
+            });
+        })();
+    </script>
 </body>
 </html>
-
