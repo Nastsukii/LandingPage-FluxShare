@@ -20,7 +20,7 @@
   --text-dark: #1e293b;
   --text-light: #475569;
   --border-dark: #cbd5e1;
-  --border-light: #e2e8f0;
+  --border-light: #6b82a1;
 }
 
 * {
@@ -140,7 +140,7 @@ header {
     justify-content: center;
     border-radius: 15px;
     text-decoration: none;
-    color: var(--text-light);
+    color: var(--border-dark);
     transition: box-shadow 0.3s;
 }
 
