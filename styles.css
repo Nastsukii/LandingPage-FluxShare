@@ -124,6 +124,7 @@ html[data-theme="light"] .site-header {
 
 .linksHeader {
     display: flex;
+    align-items: center;
     gap: 28px;
 }
 
